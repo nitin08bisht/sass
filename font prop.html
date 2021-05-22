@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> </title>
+	<link rel="stylesheet" href="">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;		
+	}
+	#fontCssProperty{
+		font-family:'Inconsolata', monospace;
+		font-variant: small-caps;	/* 'font-variant:small-caps;' used to decrease font size. */
+		font-size: 2em;		/* 1em=16px; font-size: is used to increase size. */
+		font-style: italic;
+		 font-weight: bold; /* 'lighter'; '100-900' */
+		
+	}
+	#textCssProperty{
+		color: red;
+		letter-spacing: 5px;
+		word-spacing: 5px;
+/* 		direction: rtl;  */ 		/* 'rtl' for right to left and 'ltr' for left to right by default value is ltr. */
+			/* text-indent: 100px; */
+			text-align: center;		/* align the text right sight. 'text-align:center;' */
+			text-transform: uppercase;		/* 'text-transform: capitalize/uppercase/lowercase;' */
+	}
+	#borderProperty{
+		width: 500px;
+		height: 300px;
+		background-color: orange;
+		/* border-width: 10px;
+		border-color: black;
+		border-style: dashed; */		/* 'border-style: solid/dashed/double;'  */
+		border: 5px double black; /* border property use in one line.	 */
+		border-radius: 10px;
+	}
+	ul{
+		list-style-type: square; 		/* 'list-style-type' use for change bullet. */
+	}
+	ol{
+		list-style-type:lower-roman;	/*lower-roman/upper-roman/upper-alpha/lower-alpha; */ 
+	}
+	.scrollbar{
+		width: 500px;
+		height: 100px;
+		border: 1px solid red;
+		overflow: auto;	/* overflow:hidden/auto/scroll; */
+	}
+		.father{
+		width: 500px;
+		height: 400px;
+		background-color: silver;
+	}
+	.child1{
+		width: 100px;
+		height: 60px;
+		background-color: orange;
+		position: absolute;
+		/* z-index: 4; */
+		left: 0;
+	}
+	.child2{
+		width: 100px;
+		height: 60px;
+		background-color: red;
+		position: absolute;
+		right: 0;
+	}
+	.child3{
+		width: 100px;
+		height: 60px;
+		background-color: gray;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.child4{
+		width: 100px;
+		height: 60px;
+		background-color: aqua;
+		position: absolute;
+		bottom: 0;
+
+	}
+
+</style>
+</head>
+<body>
+
+<div class="father">
+	<div class="child1">hello</div>
+	<div class="child2">hello</div>
+	<div class="child3">hello</div>
+	<div class="child4">hello</div>
+</div>
+	<p id="fontCssProperty">	welcome to my channel:-)</p>
+	<p id="textCssProperty">	Please like & subscribe:-)</p>
+<div id="borderProperty"><h3>	borderProperty</h3>	</div>
+<ul>
+	<li>Home	</li>
+	<li>Profile</li>
+	<li>Menu</li>
+	<li>Logout</li>
+</ul>
+<ol>
+	<li>	home</li>
+	<li>menu</li>
+	<li>profile</li>
+	<li> about us</li>
+</ol>
+<p class="scrollbar">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</body>
+</html>

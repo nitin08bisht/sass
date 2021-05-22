@@ -1,0 +1,39 @@
+<!-- Normally, javascript strings are primitive values, created from literals:
+
+var firstName = "jhon";
+But strings can also be defined as objects with the keyword new:
+var firstName = new String("jhon");
+
+typeof x will return string
+typeof y will return object
+
+When using the == operator, equal strings are equal.
+When using the === operator, equal strings are not equal, because the === operator expects equality in both type and value. -->
+
+<script type="text/javascript">
+	var x = "youtube";
+	var y= new String("youtube");
+	document.write(x==y);
+// The typeof() method specified the datatype.
+	document.write("<br>"+typeof(x));
+	document.write("<br>")
+	var len="welcome to my youtube channel";
+// The length property returns the length of a string
+document.write("length of string is: " +len.length);
+// The charAt()method returns the character at a specified index (position) in a string
+document.write("<br>"+len.charAt(8));
+// The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string
+document.write("<br>"+len.indexOf("channel"));
+// The lastIndexOf() method returns the index of the last occurrence of a specified text in a string
+document.write("<br>"+len.lastIndexOf("t"));	
+// Both the indexOf(), and the latIndexOf() methods return -1 if the text is not found
+// The replce() method replaces a  specified value with another value in a string
+document.write("<br>"+len.replace("channel","browser"));
+// A string is coverted to upper case with toUpperCase()
+document.write("<br>"+len.toUpperCase());
+// A string is converted to ower case with toLowerCase()
+document.write("<br>"+len.toLowerCase());
+// concat() joins two or more strings
+var sub=" plz subscribe";
+document.write("<br>"+len.concat(sub));
+</script>

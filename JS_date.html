@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+<p id="showClock"></p>
+<button onclick="clearInterval(clock)">click me</button>
+	<script type="text/javascript">
+		// month = 0-11(0-jan,1-feb,...,11-dec)
+		// date = 1-31
+		// var d = new Date(2019,11,8);
+		// document.write(d);
+		// get the date
+		// var dateobj= new Date();
+		// var month =dateobj.getUTCMonth() + 1;//+1 is added bcz month count with 0
+		// var day = dateobj.getUTCDate();
+		// var year=dateobj.getUTCFullYear();
+		// document.write(year+"/"+month+"/"+day);
+		// set the date
+		/*var d= new Date();
+		document.write("<br>");
+		d.setFullYear(2020,7,3);
+		document.write(d);*/
+/*		var d= new Date();
+		var n=d.getTime();
+		var hour = d.getHours();
+		var minute=d.getMinutes();
+		var second=d.getSeconds();
+		document.write(hour+":"+minute+":"+second);
+		document.write("<br>"+minute);
+*/
+/*The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds). The setInterval() method will continue calling the function until clearInterwal() is called, or the window is closed. The ID value returned by setInterval() is used as the parameter for the clearInterval() method.
+The clearInterval() method stops the executions of the function specified in the setInterval() method.*/
+//dynamic clock start
+var clock = setInterval(clocktiming,1000)
+function clocktiming()
+{
+	var d= new Date();
+	var thapa = d.toLocaleTimeString();
+	document.getElementById('showClock').innerHTML=thapa;
+}//dynamic clock end
+
+//setTimeout interval start
+var d = setTimeout(showalert,3000);
+function showalert(){
+	alert("welcome to my channel");
+}	//setTimeout interval end
+
+	</script>
+</body>
+</html>

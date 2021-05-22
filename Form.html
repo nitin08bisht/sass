@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script type="">
+        function validation(){
+        var username= document.getElementById('f_name').value;
+        var usernamepattern = /[A-Za-z ]{3,20}$/;
+            if(usernamepattern.test(username)){
+                document.getElementById('f_name').style.backgroundColor="green";
+            }
+            else{
+             document.getElementById('f_name').style.backgroundColor="red";   
+            }
+    }
+
+            function emailvalidation(){
+        var mailid= document.getElementById('email').value;
+        var mailidpattern = /^[A-Za-z._]{3,}[0-9_]{0,}@[A-Za-z]{3,}[.][A-Za-z.]{2,6}$/;
+            if(mailidpattern.test(mailid)){
+                document.getElementById('email').style.backgroundColor="green";
+            }
+            else{
+             document.getElementById('email').style.backgroundColor="red";   
+            }
+        }
+        function phnvalidation(){
+            var phn=document.getElementById('phone').value;
+            var phnpattern=/^[789][0-9]{9}$/;
+            if(phnpattern.test(phn)){
+                document.getElementById('phone').style.backgroundColor="green";
+            }
+            else{
+                document.getElementById('phone').style.backgroundColor="red";
+            }
+        }
+        function lettersOnly(input) {
+            // body...
+            var regex = /[^a-zA-Z]/gi;
+            input.value = input.value.replace(regex,"");
+        }
+        function numbersOnly(input) {
+            // body...
+            var Phone = /[^0-9]/gi;
+            input.value = input.value.replace(Phone,"");
+        }
+        function printpage() {
+            window.print();
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="form1">
+        <h1 class="ad">ADDMISSION FORM</h1>
+        <div class="notification"><marquee behavior="alternate" scrollamount="10">Last date of Form Submission is 20/06/2021</marquee></div>
+        
+        <form method="post">
+            <table class="add_form">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="f_name" id="f_name" onkeyup="validation()" required autofocus/></td>
+                    <td>Middle Name</td>
+                    <td><input type="text" name="m_name" size="15" maxlength="20" pattern="[a-zA-Z]" autofocus/></td>
+                    <td>Last Name</td>
+                    <td><input type="text" name="l_name" size="15" maxlength="20"   onkeyup ="lettersOnly(this)" autofocus/></td>
+                </tr>
+                <tr>
+                    <td>Father Name </td>
+                    <td><input type="text" name="F_name" size="15" maxlength="20" onkeyup ="lettersOnly(this)" required autofocus/></td>
+                    <td>Mother Name </td>
+                    <td><input type="text" name="M_name"size="15" maxlength="20" onkeyup ="lettersOnly(this)" required autofocus /> </td>
+                </tr>
+                <tr>
+                    <td>DOB </td>
+                    <td><input type="date" name="dob" required autofocus /> </td>
+                    <td>Gender </td>
+                    <td><input type="radio" value="male" name="gen"/>MALE&nbsp;&nbsp;<input type="radio" value="female" name="gen" />FEMALE</td>
+                </tr>
+                <tr>
+                    <td>Adhaar No. </td>
+                    <td><input type="text" size="15" maxlength="12" name="adh_no." onkeyup="numbersOnly(this)" required /></td>
+                   </tr><tr><td></td> <td><input type="file" required /></td>
+                </tr>
+
+                <tr>
+                    <td>Country:</td>
+                    <td>
+                        <select name="r_country" required>
+                            <option value="India">India</option>css
+                            <option value="Other">Other</option>
+                        </select>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>Email </td>
+                    <td><input type="text" id="email" onkeyup="emailvalidation()" required /></td>
+                    <td>Phone No.</td><td> <!-- <input type="Phone" size="15" maxlength="10" onkeyup="numbersOnly(this)" required /> -->
+                        <input type="Phone" id="phone" onkeyup="phnvalidation()" required /> 
+                    </td>
+                </tr>
+                <tr><td>ADDRESS:</td><td>
+                    <textarea rows="4" cols="22"></textarea>
+                    <td>PIN No.</td><td><input type="text" size="15" maxlength="6" onkeyup="numbersOnly(this)" required placeholder="PIN CODE" /> </td></tr>
+
+                <tr> <td><input type="submit" /></td><td><input type="button" name="print" value="Print" onclick="printpage()"></td></tr>
+            </table>
+
+        </form>
+        <fieldset></fieldset>
+    </div>
+</body>
+</html>

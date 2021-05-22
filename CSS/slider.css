@@ -1,0 +1,29 @@
+
+  *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+.mySlides {
+        display: none;
+        overflow: hidden; 
+    min-width: 600px;
+    max-width: 600px;
+        vertical-align: middle;
+      }
+.mySlides img {
+    
+      }
+      .slideshow{
+        /* max-width:1000px; */
+        /* position: relative; */
+        /* margin: 0; */
+      }
+      @media only screen and (max-width: 300px) {
+       }
+       .myClass{
+     /*   	margin-right: 10px;
+       	margin-left: 10px;
+       	max-width: 700px;
+       	min-width: 700px; */
+       }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<p id="thapa">Thapa</p>
+	<p class="wel">technical</p>
+	<!-- How to access element by ID -->
+	<script type="text/javascript"> 
+// jo bhi paragraph id ke through access krna chah rahe hotey hai uska content innerHTML se mill jata hai
+var a= document.getElementById("thapa").innerHTML;  
+document.write(a);
+</script>
+<!-- how to access elements by class -->
+<script type="text/javascript">
+	// class ko array ki tarh treat karega.jab class ko without index value diye innerHTMLke through access karoge toh undefined aayega.
+	// var b=document.getElementsByClassName("wel").innerHTML;		//output:-	undefined
+	// class ko innerHTML ke through access krtey waqt class ki index value bhi deni hoti hai.
+	var b=document.getElementsByClassName("wel")[0].innerHTML;
+	document.write(b);
+</script>
+<script type="text/javascript">
+	var tag= document.getElementsByTagName("p");
+	document.write(tag);
+	console.log(tag);
+</script>
+<!-- how to access first elements -->
+<script type="text/javascript">
+
+	var p = document.querrySeletor("p").innerHTML;
+	document.write(p);
+</script>
+<!-- access children of a body -->
+<script type="text/javascript">
+	var child=document.body.children;
+	console.log(child);
+// add a new child in a body
+var para= document.createElement("p");		//create child
+var textNode= document.createTextNode("This is a new Para.");	//textnode is created
+para.appendChild(textNode);		//append textNode with child.
+console.log(para);
+document.body.appendChild(para);		//to append child in body.
+
+//access firstchild and lastchild
+var list= document.querySelector("p");
+console.log(list);
+console.log(list.firstChild);
+console.log(list.lastChild);
+var firstsibling=thapa.nextElementSibling;		//for access first siblibling
+// var firstsibling=thapa.nextElementSibling.nextSibling;		//to access next of first sibling.
+console.log(firstsibling);
+
+console.log(list.parentNode);	//to access parent node
+</script>
+</body>
+</html>

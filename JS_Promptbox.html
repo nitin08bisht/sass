@@ -1,0 +1,26 @@
+
+<script type="text/javascript">
+/*javaScript Dialog Boxes Alert, Prompt,Confirmation.
+Prompt Box. A prompt box is often used if you want the user to input a value before enternig a page.
+when a prompt box pops up, the user will have to click either "OK" or "cancel" to proceed after enterning an input value.*/
+	/*var name=prompt("what is your name");
+	if(name!=""){
+		document.write("Nice to meet you "+name+".");
+	}*/		//prompt Box
+/*A confirmation dialog box is mostly used to take user's prermission on any option. It displays a dialog box with two buttons: OK and cancel.
+If the user clicks on the Ok button, the window method confirm() will return true.If the user clicks on cancel button, then confirm() returns false.*/
+
+function myfun()
+{ 
+	var userConfirmation=confirm("do you want visit");
+if(userConfirmation==true){
+	window.open("https://getbootstrap.com/docs/4.0/components/breadcrumb/");
+	return true;
+}
+else{
+	document.write("user does not want visit");
+	return false;
+}
+}
+</script>
+<input type="button" name="" onclick="myfun()" value="Click">
